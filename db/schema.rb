@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160406141636) do
     t.integer  "project_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.boolean  "completed"
     t.text     "task_file"
   end
 
