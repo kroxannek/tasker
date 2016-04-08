@@ -3,9 +3,10 @@ class CreateTasks < ActiveRecord::Migration
     create_table :tasks do |t|
       t.string :title
       t.text :description
-      t.references :project, index: true, foreign_key: true
+      t.references :project, index: true
 
       t.timestamps null: false
     end
+    add_foreign_key :tasks, :projects
   end
 end

@@ -4,7 +4,7 @@ class Task < ActiveRecord::Base
   after_update :update_percent_complete if :mark_completed?
   after_create :update_percent_complete
 
-  scope :completed, -> { where(complete: true) }
+  scope :completed, -> { where(completed: true) }
 
   mount_uploader :task_file, TaskFileUploader
 
